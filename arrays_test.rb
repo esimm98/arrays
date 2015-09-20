@@ -16,4 +16,5 @@ class ArraysTest < MiniTest::Test
 		assert_equal [0, 1], @m.middles([0, 0, 0], [2, 1, 2])
 		assert_equal [-5, 4], @m.middles([10, -5, 1], [2, 4, 5])
 	end
+	
 end
