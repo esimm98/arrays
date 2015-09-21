@@ -11,5 +11,16 @@ module Arrays
 		end
 		return num
 	end
+
+	def lucky13?(arr)
+		!arr.include?(1) && !arr.include?(3)
+	end
+
+	def repeat_separator(word, sep, count)
+		str = ""
+		str = str + "#{word}#{sep}" * (count - 1)
+		str = str + word
+		str
+	end
 	
 end
