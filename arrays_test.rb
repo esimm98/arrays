@@ -31,4 +31,9 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.lucky13?([2, 3, 2])
 	end
 
+	def test_repeat_separator
+		assert_equal 'ThisAndThis', @m.lucky13?(['This', 'And', 2])
+		assert_equal 'OnAndOnAndOnAndOn', @m.lucky13?(['On', 'And', 4])
+	end
+
 end
