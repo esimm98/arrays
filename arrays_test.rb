@@ -36,4 +36,12 @@ class ArraysTest < MiniTest::Test
 		assert_equal 'OnAndOnAndOnAndOn', @m.repeat_separator('On', 'And', 4)
 	end
 
+	def test_same_ends
+		assert_equal true, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 0)
+		assert_equal true, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 2)
+		assert_equal true, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 7)
+		assert_equal false, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 3)
+		assert_equal false, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 5)
+	end
+
 end
