@@ -24,7 +24,7 @@ module Arrays
 
 	def same_ends?(arr, n)
 		0.upto(n) do |i|
-			if (arr[i] == arr[-n + i])
+			if arr[i] == arr[-n + i]
 				return true
 			else
 				return false
@@ -33,7 +33,17 @@ module Arrays
 	end
 	
 	def starry?(str)
-		
+		index = 0
+		0.upto(str.length - 1) do |n|
+			index = str.index('*', n)
+			if n == 0 || n == str.length - 1
+				next
+			elsif str[index - 1] == str[index + 1]
+				return true
+			else
+				return false
+			end
+		end
 	end
 
 end
