@@ -18,9 +18,22 @@ module Arrays
 
 	def repeat_separator(word, sep, count)
 		str = ""
-		str = str + "#{word}#{sep}" * (count - 1)
-		str = str + word
+		str = str + "#{word}#{sep}" * (count - 1) + word
 		str
 	end
+
+	def same_ends?(arr, n)
+		0.upto(n) do |i|
+			if (arr[i] != arr[-n + i])
+				return false
+			else
+				return true
+			end
+		end
+	end
 	
+	def starry?(str)
+		
+	end
+
 end
