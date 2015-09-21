@@ -44,4 +44,11 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.same_ends?([5, 6, 45, 99, 23, 5, 6], 5)
 	end
 
+	def test_starry
+		assert_equal true, @m.starry?('a*abc*c')
+		assert_equal true, @m.starry?('****')
+		assert_equal false, @m.starry?('abc*efg')
+		assert_equal false, @m.starry?('12*34')
+	end
+
 end

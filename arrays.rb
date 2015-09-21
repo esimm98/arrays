@@ -24,10 +24,10 @@ module Arrays
 
 	def same_ends?(arr, n)
 		0.upto(n) do |i|
-			if (arr[i] != arr[-n + i])
-				return false
-			else
+			if (arr[i] == arr[-n + i])
 				return true
+			else
+				return false
 			end
 		end
 	end
