@@ -5,11 +5,11 @@ module Arrays
 	end
 
 	def max(arr)
-		num = arr[0]
+		max = arr[0]
 		arr.each do |n|
-			num = n if n > num
+			max = n if n > max
 		end
-		return num
+		return max
 	end
 
 	def lucky13?(arr)
@@ -44,6 +44,20 @@ module Arrays
 				return false
 			end
 		end
+	end
+
+	def plus_it(word, token)
+		arr = word.split(//)
+		index = 0
+		0.upto(word.length - 1) do |n|
+			index = word.index(token, n)
+			arr[n] = '+' if n != index
+		end
+		arr.join
+	end
+
+	def zero_front(arr)
+
 	end
 
 end
