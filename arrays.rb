@@ -78,4 +78,13 @@ module Arrays
 		arr
 	end
 
+	def max_span(arr)
+		span = 0
+		for n in 0..(arr.length - 1)
+			new = ( arr.length - arr.reverse.index(arr[n]) ) - n
+			span = new if new > span
+		end
+		span
+	end
+
 end
