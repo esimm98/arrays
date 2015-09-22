@@ -65,4 +65,17 @@ module Arrays
 		arr
 	end
 
+	def ten_run(arr)
+		n = 0
+		index = arr.index { |x| x % 10 == 0 }
+		for i in index..(arr.length - 1)
+			if (arr[i] % 10 == 0)
+				n = arr[i]
+			else
+				arr[i] = n
+			end
+		end
+		arr
+	end
+
 end
