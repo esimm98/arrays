@@ -51,4 +51,14 @@ class ArraysTest < MiniTest::Test
 		assert_equal false, @m.starry?('12*34')
 	end
 
+	def test_plus_it
+		assert_equal '+o++', @m.plus_it('word', 'o')
+		assert_equal '+++s+s+s+++++', @m.plus_it('thisisastring', 's')
+	end
+
+	def test_zero_front
+		assert_equal [0, 0, 5, 3, 1, 6], @m.zero_front([5, 0, 3, 1, 0, 6])
+		assert_equal [0, 0, 0, 1, 3], @m.zero_front([1, 0, 3, 0, 0])
+	end
+
 end

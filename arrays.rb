@@ -57,7 +57,12 @@ module Arrays
 	end
 
 	def zero_front(arr)
-
+		count = arr.count(0)
+		arr.delete(0)
+		for n in 1..count
+			arr.unshift(0)
+		end
+		arr
 	end
 
 end
